@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library</title>
+</head>
+<body>
+    <header>Virtual Library</header>
+    <section>
+        <form id="register">
+            <h3>Register a new book!</h3>
+            <label for="bookName">Name of the book:</label>
+            <input type="text" name="bookName" id="bookName">
+            <label for="bookAuthor">Author:</label>
+            <input type="text" name="bookAuthor" id="bookAuthor">
+            <label for="numberPages">Number of pages:</label>
+            <input type="number" name="numberOfPages" id="numberOfPages">
+            <label for="bookCover">Book cover (URL):</label>
+            <input type="text" name="bookCover" id="bookCover">
+            <label for="synopsis">Synopsis:</label>
+            <textarea name="synopsis" id="synopsis" cols="50" rows="10"></textarea>
+            <button id="btnRegister">Finish the register</button>
+        </form>
+
+        <div id="myModal" class="modal">
+            <div id="contentModel" class="modal-content">
+                <span id="btnCloseModal">&times;</span>
+                <h3 id="modalTitle"></h3>
+                <p id="txtSynopsis"></p>
+            </div>
+        </div>
+
+        <div>
+            <h3>Search for a book</h3>
+            <label for="bookSearch">Name of the book:</label>
+            <input type="text" name="bookSearch" id="bookSearch">
+            <button id="btnSearch">Search</button>
+            <div id="foundBooks"></div>
+        </div>
+
+        <div id="AllBooks">
+            <h3 id="titleAllBooks">All books</h3>
+            <div id="listOfAllBooks">
+                <p id="emptyBookList">No books here, verify the name or register a new one.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="/biblioteca.js"></script>
+</body>
+</html>
